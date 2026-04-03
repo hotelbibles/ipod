@@ -25,6 +25,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black",
+    title: "iPod Classic",
+  },
   icons: [
     {
       rel: "apple-touch-icon",
@@ -43,8 +50,20 @@ export const metadata: Metadata = {
       sizes: "16x16",
       url: favicon16Url,
     },
+
+    {
+      rel: "icon",
+      url: "/icon-192.png",
+      sizes: "192x192",
+    },
+    {
+      rel: "icon",
+      url: "/icon-512.png",
+      sizes: "512x512",
+    },
   ],
 };
+
 
 export const viewport: Viewport = {
   width: "device-width",
