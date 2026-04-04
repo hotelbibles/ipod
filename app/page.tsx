@@ -4,11 +4,12 @@ import { APPLE_DEVELOPER_TOKEN } from "@/utils/constants/api";
 export default async function Page({
   searchParams,
 }: {
-  searchParams: Record<string, string | undefined>;
+  searchParams: Promise<Record<string, string | undefined>>;
 }) {
   const appleAccessToken = APPLE_DEVELOPER_TOKEN ?? "";
 
-  const spotifyCode = searchParams.code;
+  const params = await searchParams;
+  const spotifyCode = params.code;
 
   return (
     <Ipod
