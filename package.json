@@ -6,7 +6,7 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "bundle-report": "ANALYZE=true npm run build",
-    "start": "vercel dev",
+    "start": "next start",
     "lint": "next lint",
     "type-check": "tsc"
   },
