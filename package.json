@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
-    "bundle-report": "ANALYZE=true yarn build",
+    "bundle-report": "ANALYZE=true npm run build",
     "start": "vercel dev",
     "lint": "next lint",
     "type-check": "tsc"
