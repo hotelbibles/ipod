@@ -9,14 +9,14 @@ export const getRootAppUrl = () => {
   const isDev = process.env.NODE_ENV === "development";
 
   const protocol = isDev ? "http" : "https";
-  const rootUrl = isDev ? `127.0.0.1:3000` : process.env.VERCEL_BASE_URL;
+  const rootUrl = isDev ? `127.0.0.1:3000` : process.env.VERCEL_URL;
 
   return `${protocol}://${rootUrl}`;
 };
 
 export const getSpotifyRedirectUri = () => {
-  // Example: http://127.0.0.1:3000/callback
-  return getRootAppUrl();
+  // Example: http://127.0.0.1:3000/api/spotify/callback
+  return `${getRootAppUrl()}/api/spotify/callback`;
 };
 
 export const getSpotifyAuthorizationHeader = (
